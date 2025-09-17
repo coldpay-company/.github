@@ -1,0 +1,14 @@
+name: Issue
+description: Abertura rápida de issue
+title: "[ISSUE] Descreva brevemente"
+labels: []
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição
+      description: O que você precisa fazer ou qual é o problema?
+      placeholder: Descreva em 1-3 linhas
+    validations:
+      required: true
