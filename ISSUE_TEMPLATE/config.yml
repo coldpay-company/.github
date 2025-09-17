@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Perguntas gerais / Suporte
+    url: https://github.com/ORGANIZATION/discussions
+    about: Use Discussions para dúvidas e suporte antes de abrir uma issue.
