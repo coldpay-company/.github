@@ -1,86 +1,31 @@
-name: "✨ Nova Tarefa (Padrão)"
-description: "Template obrigatório para criação de issues em todos os projetos do Fridge Ecosystem."
-title: "[Feature] "
-labels: ["backlog"]
+name: "Issue simples"
+description: "Template único e simples para qualquer tipo de issue."
+title: "[Issue] Descreva brevemente"
+labels: []
 assignees: []
 body:
-  - type: markdown
-    attributes:
-      value: |
-        # 🧊 Fridge Ecosystem — Template de Issue
-        Preencha os campos abaixo. Os itens marcados como **Obrigatório** devem ser respondidos.
-  - type: input
-    id: sistema
-    attributes:
-      label: Sistema (Obrigatório)
-      description: Indique o repositório/sistema alvo
-      placeholder: ex.: fridge-os | fridge-link | fridge-manager-api | fridge-shop-api | fridge-manager | fridge-shop
-    validations:
-      required: true
-  - type: dropdown
-    id: tipo
-    attributes:
-      label: Tipo (Obrigatório)
-      options:
-        - feature
-        - bug
-        - study
-        - infra
-        - docs
-      default: 0
-    validations:
-      required: true
   - type: textarea
-    id: objetivo
+    id: description
     attributes:
-      label: 🎯 Objetivo (Obrigatório)
-      description: O que deve ser entregue? Resultado esperado e impacto.
-      placeholder: "Ex.: Implementar leitura do sensor de porta e envio do evento door_open ao FridgeLink."
+      label: Descrição
+      description: O que precisa ser feito ou qual é o problema?
+      placeholder: Descreva em 1-3 linhas
     validations:
       required: true
-  - type: textarea
-    id: contexto
-    attributes:
-      label: 📋 Contexto
-      description: Por que isso é necessário? Links e dependências úteis.
-      placeholder: "Ex.: Precisamos capturar abertura/fechamento para registrar transações."
   - type: checkboxes
-    id: criterios
+    id: subtasks
     attributes:
-      label: ✅ Critérios de Aceite (Obrigatório)
-      description: Marque/adicione os critérios que determinam 'pronto' (DoD).
+      label: Subtarefas
+      description: Liste e acompanhe as subtarefas (marque conforme concluir)
       options:
-        - label: Implementação atende ao objetivo descrito
-          required: true
-        - label: Testes (unitários/instrumentados) escritos e passando
-        - label: Logs/telemetria adicionados quando aplicável
-        - label: Documentação/README atualizados
+        - label: Subtarefa 1
+        - label: Subtarefa 2
+        - label: Subtarefa 3
+        - label: Subtarefa 4
+        - label: Subtarefa 5
   - type: textarea
-    id: detalhes
+    id: notes
     attributes:
-      label: 🛠️ Detalhes Técnicos
-      description: Endpoints, payloads, arquitetura, referências, diagramas.
-      placeholder: "Ex.: POST /events { type: 'door_open', ts: ... }"
-  - type: dropdown
-    id: estimativa
-    attributes:
-      label: ⏱️ Estimativa (Obrigatório)
-      options:
-        - XS
-        - S
-        - M
-        - L
-        - XL
-      default: 2
-    validations:
-      required: true
-  - type: textarea
-    id: riscos
-    attributes:
-      label: ⚠️ Riscos & Dependências
-      placeholder: "Ex.: Depende da liberação do endpoint no FridgeLink."
-  - type: input
-    id: relacao
-    attributes:
-      label: 🔗 Relacionado a (Issues/PRs)
-      placeholder: "Ex.: #12, #45"
+      label: Notas
+      description: Links, referências ou observações rápidas
+      placeholder: Links, decisões, riscos
